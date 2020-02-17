@@ -1,6 +1,7 @@
 let index = 0;
 let runway = document.getElementById("runway");
-
+let check = document.getElementsByClassName("checkered")[0];
+let loading = document.getElementsByClassName("loading")[0];
 async function run() {
   let res = await fetch(
     "https://v2-api.sheety.co/483642879b0fbfc0b773ec3bd0a70c0c/racecarBulletin/sheet1"
@@ -38,13 +39,14 @@ async function run() {
         let pos =
           (car.parentNode.offsetWidth * roster[student].score) /
             roster[student].max -
-          20 -
           label.offsetWidth -
-          car.offsetWidth;
-        // if (roster[student].score >= roster[student].max) {
-        //   label.style.backgroundColor = "yellow";
-        // }
+          30;
         if (pos <= 0) {
+          car.style.transform = `translateX(0px)`;
+        }
+        if (roster[student].score >= roster[student].max) {
+          car.style.transform = `translateX(${pos + 20}px)`;
+        } else if (roster[student].score <= 0) {
           car.style.transform = `translateX(0px)`;
         } else if (roster[student].score == 1) {
           car.style.transform = `translateX(6px)`;
@@ -55,7 +57,9 @@ async function run() {
         }
       });
     })
-    .then(() => {});
+    .then(() => {
+      loading.style.display = "none";
+    });
 }
 
 run();

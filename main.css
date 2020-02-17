@@ -53,6 +53,7 @@ section.flex {
   margin: 0 auto;
   padding: 15px;
   width: 80%;
+  min-width: 638px;
   max-width: 1500px;
   background-image: linear-gradient(
       rgba(105, 105, 105, 0.9),
@@ -62,12 +63,10 @@ section.flex {
   border-radius: 10px;
 }
 .checkered {
-  width: 30px;
+  width: 40px;
+  min-width: 35px;
   height: auto;
   background-color: white;
-  /* background: url("keys.png");
-  background-position: center;
-  background-size: contain; */
 
   background-image: linear-gradient(45deg, #000 25%, transparent 25%),
     linear-gradient(-45deg, #000 25%, transparent 25%),
@@ -75,6 +74,10 @@ section.flex {
     linear-gradient(-45deg, transparent 75%, #000 75%);
   background-size: 20px 20px;
   background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+
+  /* background: url("keys.png");
+  background-position: center;
+  background-size: contain; */
 }
 #runway {
   width: 100%;
@@ -106,7 +109,7 @@ i.car {
   font-size: 20px;
   color: #fff943;
   margin-top: 3px;
-  transition: transform 8s ease;
+  transition: transform 3s ease;
 }
 
 div::before,
@@ -141,4 +144,96 @@ span.score {
 }
 .track:nth-of-type(2n + 1) {
   background-color: #353738;
+}
+
+.container {
+  font-family: Helvetica;
+  margin: 0 auto;
+}
+
+.loader {
+  height: 20px;
+  width: 250px;
+
+  margin: auto;
+}
+.loader--dot {
+  animation-name: loader;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+}
+.loader--dot:first-child {
+  background-color: #8cc759;
+  animation-delay: 0.5s;
+}
+.loader--dot:nth-child(2) {
+  background-color: #8c6daf;
+  animation-delay: 0.4s;
+}
+.loader--dot:nth-child(3) {
+  background-color: #ef5d74;
+  animation-delay: 0.3s;
+}
+.loader--dot:nth-child(4) {
+  background-color: #f9a74b;
+  animation-delay: 0.2s;
+}
+.loader--dot:nth-child(5) {
+  background-color: #60beeb;
+  animation-delay: 0.1s;
+}
+.loader--dot:nth-child(6) {
+  background-color: #fbef5a;
+  animation-delay: 0s;
+}
+.loader--text {
+  position: absolute;
+  top: 200%;
+  left: 0;
+  right: 0;
+  width: 4rem;
+  margin: auto;
+}
+.loader--text:after {
+  color: white;
+  content: "Loading";
+  font-weight: bold;
+  animation-name: loading-text;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loader {
+  15% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(230px);
+  }
+  65% {
+    transform: translateX(230px);
+  }
+  95% {
+    transform: translateX(0);
+  }
+}
+@keyframes loading-text {
+  0% {
+    content: "Loading";
+  }
+  25% {
+    content: "Loading.";
+  }
+  50% {
+    content: "Loading..";
+  }
+  75% {
+    content: "Loading...";
+  }
 }
