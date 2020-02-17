@@ -1,15 +1,16 @@
-* {
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
 }
-html {
-  font-family: sans-serif;
-  background-image: url("grass.jpg");
-  background-size: 100px;
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url("sky.jpg");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: cover;
 }
 header.header {
   width: 100%;
@@ -17,13 +18,33 @@ header.header {
   background-color: white;
   margin-bottom: 50px;
 }
-
-#runway {
-  width: 80%;
+section.flex {
   margin: 0 auto;
+  border: 17px solid #888888;
+  width: 80%;
   max-width: 1200px;
-  border-right: 10px solid white;
+  background-color: #656565;
+  border-radius: 10px;
 }
+.checkered {
+  width: 30px;
+  height: auto;
+  background-color: white;
+  /* background: url("keys.png");
+  background-position: center;
+  background-size: contain; */
+
+  background-image: linear-gradient(45deg, #000 25%, transparent 25%),
+    linear-gradient(-45deg, #000 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #000 75%),
+    linear-gradient(-45deg, transparent 75%, #000 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+#runway {
+  width: 100%;
+}
+
 .track {
   display: flex;
   width: 100%;
@@ -31,38 +52,53 @@ header.header {
   background-color: #353738;
   margin: 5px 0;
 }
-
-p.label {
+p {
   margin: 0;
-  width: 120px;
-  line-height: 30px;
+}
+p.label {
+  width: fit-content;
+  line-height: 20px;
   vertical-align: middle;
   text-align: center;
   background-color: white;
+  margin-right: 3px;
+  padding-left: 2px;
+  height: 20px;
+  margin: 4px;
+  color: #313131;
+  border-radius: 20px;
 }
 
-.slidecontainer {
-  width: 100%; /* Width of the outside container */
+i.car {
+  font-size: 20px;
+  color: #00ffa1;
+  margin-top: 3px;
+  transition: transform 8s ease;
 }
 
-/* The slider itself */
-.slider {
-  -webkit-appearance: none; /* Override default CSS styles */
-  appearance: none;
-  width: 100%; /* Full-width */
-  height: 25px; /* Specified height */
-  background: transparent; /* Grey background */
-  outline: none; /* Remove outline */
+div::before,
+div::after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  right: -5px;
 }
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  background-image: url("car.png"),
-    -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(0.49, transparent), color-stop(0.51, transparent), color-stop(1, transparent));
-  background-size: 35px;
-  background-repeat: no-repeat;
-  background-position: 50%;
+span.score {
+  font-weight: bold;
+  border-radius: 100px;
+  font-size: 13px;
+  width: 20px;
+  height: 20px;
+  float: right;
+  line-height: 20px;
+  margin-left: 10px;
 }
+
+.flex {
+  display: flex;
+}
+
+/* .track:nth-of-type(n + 10) {
+  background-color: #353738;
+} */
