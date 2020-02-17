@@ -16,13 +16,14 @@ async function run() {
       Object.keys(roster).forEach(function(student) {
         let track = document.createElement("div");
         let car = document.createElement("i");
-        let label = document.createElement("p");
+        let label = document.createElement("div");
+        let name = document.createElement("p");
         let score = document.createElement("span");
 
         track.setAttribute("class", "track");
         score.setAttribute("class", "score");
 
-        label.innerHTML = roster[student].name;
+        name.innerHTML = roster[student].name;
         score.innerHTML = roster[student].score;
 
         label.setAttribute("class", "label");
@@ -30,7 +31,8 @@ async function run() {
 
         track.appendChild(label);
         track.appendChild(car);
-        label.appendChild(score);
+        label.appendChild(name);
+
         runway.appendChild(track);
 
         let pos =
@@ -39,8 +41,12 @@ async function run() {
           20 -
           label.offsetWidth -
           car.offsetWidth;
-
-        if (roster[student].score == 1) {
+        // if (roster[student].score >= roster[student].max) {
+        //   label.style.backgroundColor = "yellow";
+        // }
+        if (pos <= 0) {
+          car.style.transform = `translateX(0px)`;
+        } else if (roster[student].score == 1) {
           car.style.transform = `translateX(6px)`;
         } else if (roster[student].score == 2) {
           car.style.transform = `translateX(16px)`;

@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto&display=swap");
 html,
 body {
   padding: 0;
@@ -12,18 +11,54 @@ body {
   background-position: center;
   background-size: cover;
 }
+header * {
+  text-align: center;
+}
+header h1 {
+  font-family: "Pacifico", cursive;
+  font-weight: 100;
+  margin: 0;
+  color: wheat;
+  padding: 30px;
+  background-color: #4257b2;
+}
+header h2 {
+  opacity: 0.8;
+  color: white;
+  margin: 0;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #3b4c9b;
+}
 header.header {
   width: 100%;
-  height: 30px;
-  background-color: white;
+  background-color: #3b5ba5;
   margin-bottom: 50px;
+}
+footer {
+  background-color: #4257b2;
+  height: fit-content;
+  margin-top: 60px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+footer h3 {
+  padding: 50px 0 50px 0;
+  opacity: 0.3;
+  font-size: 15px;
+  margin: 0;
 }
 section.flex {
   margin: 0 auto;
-  border: 17px solid #888888;
+  padding: 15px;
   width: 80%;
-  max-width: 1200px;
-  background-color: #656565;
+  max-width: 1500px;
+  background-image: linear-gradient(
+      rgba(105, 105, 105, 0.9),
+      rgba(105, 105, 105, 0.9)
+    ),
+    url(static.gif);
   border-radius: 10px;
 }
 .checkered {
@@ -49,14 +84,12 @@ section.flex {
   display: flex;
   width: 100%;
   vertical-align: middle;
-  background-color: #353738;
-  margin: 5px 0;
 }
 p {
   margin: 0;
 }
-p.label {
-  width: fit-content;
+div.label {
+  width: 100px;
   line-height: 20px;
   vertical-align: middle;
   text-align: center;
@@ -71,7 +104,7 @@ p.label {
 
 i.car {
   font-size: 20px;
-  color: #00ffa1;
+  color: #fff943;
   margin-top: 3px;
   transition: transform 8s ease;
 }
@@ -102,3 +135,10 @@ span.score {
 /* .track:nth-of-type(n + 10) {
   background-color: #353738;
 } */
+
+.track:nth-of-type(2n) {
+  background-color: #404446;
+}
+.track:nth-of-type(2n + 1) {
+  background-color: #353738;
+}
