@@ -9,7 +9,6 @@ async function run() {
     .then(res => res.json())
     .then(data => {
       let roster = data["sheet1"];
-
       roster.sort(function(a, b) {
         return b.score - a.score;
       });
@@ -33,7 +32,7 @@ async function run() {
         track.appendChild(label);
         track.appendChild(car);
         label.appendChild(name);
-
+        loading.style.display = "none";
         runway.appendChild(track);
 
         let pos =
@@ -56,9 +55,6 @@ async function run() {
           car.style.transform = `translateX(${pos}px)`;
         }
       });
-    })
-    .then(() => {
-      loading.style.display = "none";
     });
 }
 
