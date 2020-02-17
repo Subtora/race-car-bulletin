@@ -43,7 +43,7 @@ async function run() {
           label.offsetWidth -
           30;
         if (pos <= 0) {
-          car.style.transform = `translateX(0px)`;
+          pos = 0;
         }
         if (roster[student].score >= roster[student].max) {
           car.style.transform = `translateX(${pos + 20}px)`;
