@@ -32,6 +32,7 @@ async function run() {
         track.appendChild(label);
         track.appendChild(car);
         label.appendChild(name);
+        label.appendChild(score);
         loading.style.display = "none";
         runway.appendChild(track);
 

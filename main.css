@@ -89,13 +89,15 @@ section.flex {
   vertical-align: middle;
 }
 p {
-  margin: 0;
+  margin: 0 auto;
 }
 div.label {
+  font-family: monospace;
+  display: flex;
+  font-size: 14px;
   width: 100px;
   line-height: 20px;
   vertical-align: middle;
-  text-align: center;
   background-color: white;
   margin-right: 3px;
   padding-left: 2px;
@@ -104,7 +106,8 @@ div.label {
   color: #313131;
   border-radius: 20px;
 }
-
+.label .score {
+}
 i.car {
   font-size: 20px;
   color: #fff943;
