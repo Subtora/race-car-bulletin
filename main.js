@@ -2,9 +2,10 @@ let index = 0;
 let runway = document.getElementById("runway");
 let check = document.getElementsByClassName("checkered")[0];
 let loading = document.getElementsByClassName("loading")[0];
+//NO MORE THAN 8 CHARACTERS
 async function run() {
   let res = await fetch(
-    "https://v2-api.sheety.co/483642879b0fbfc0b773ec3bd0a70c0c/racecarBulletin/sheet1"
+    "https://v2-api.sheety.co/483642879b0fbfc0b773ec3bd0a70c0c/raceCarRankings/sheet1"
   )
     .then(res => res.json())
     .then(data => {
