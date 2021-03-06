@@ -17,7 +17,7 @@ function Loader() {
 }
 
 function App() {
-  const [roster, setRoster] = useState({});
+  const [roster, setRoster] = useState(null);
   const [active, setActive] = useState(false);
 
   useEffect(() => {
@@ -31,6 +31,9 @@ function App() {
           return b.score - a.score;
         });
         setRoster(roster);
+      })
+      .catch(() => {
+        setRoster('error');
       });
 
     setTimeout(() => {
@@ -45,7 +48,7 @@ function App() {
         <h2>Heather Smith Piano Studio</h2>
       </div>
       <div className="racetrack">
-        {Object.keys(roster).length ? (
+        {roster && roster !== 'error' ? (
           Object.keys(roster).map((e, i) => (
             <div className="lane" key={i}>
               <div className="stats">
@@ -65,6 +68,10 @@ function App() {
               </div>
             </div>
           ))
+        ) : roster === 'error' ? (
+          <div style={{ color: 'white' }}>
+            Sorry! We encountered an error. Try again later...
+          </div>
         ) : (
           <Loader />
         )}

@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/race-car-bulletin/static/css/main.54df9ba1.chunk.css",
-    "main.js": "/race-car-bulletin/static/js/main.6d871aca.chunk.js",
-    "main.js.map": "/race-car-bulletin/static/js/main.6d871aca.chunk.js.map",
+    "main.css": "/race-car-bulletin/static/css/main.6a013b3a.chunk.css",
+    "main.js": "/race-car-bulletin/static/js/main.5d0ac248.chunk.js",
+    "main.js.map": "/race-car-bulletin/static/js/main.5d0ac248.chunk.js.map",
     "runtime-main.js": "/race-car-bulletin/static/js/runtime-main.b1ec385c.js",
     "runtime-main.js.map": "/race-car-bulletin/static/js/runtime-main.b1ec385c.js.map",
     "static/css/2.7d0b1304.chunk.css": "/race-car-bulletin/static/css/2.7d0b1304.chunk.css",
     "static/js/2.3d8a0131.chunk.js": "/race-car-bulletin/static/js/2.3d8a0131.chunk.js",
     "static/js/2.3d8a0131.chunk.js.map": "/race-car-bulletin/static/js/2.3d8a0131.chunk.js.map",
     "index.html": "/race-car-bulletin/index.html",
-    "precache-manifest.1722f529c36b97f28c3ada9bebd67d60.js": "/race-car-bulletin/precache-manifest.1722f529c36b97f28c3ada9bebd67d60.js",
+    "precache-manifest.ebcf0ac3b4ddafb1156b47dac924922c.js": "/race-car-bulletin/precache-manifest.ebcf0ac3b4ddafb1156b47dac924922c.js",
     "service-worker.js": "/race-car-bulletin/service-worker.js",
     "static/css/2.7d0b1304.chunk.css.map": "/race-car-bulletin/static/css/2.7d0b1304.chunk.css.map",
-    "static/css/main.54df9ba1.chunk.css.map": "/race-car-bulletin/static/css/main.54df9ba1.chunk.css.map",
+    "static/css/main.6a013b3a.chunk.css.map": "/race-car-bulletin/static/css/main.6a013b3a.chunk.css.map",
     "static/js/2.3d8a0131.chunk.js.LICENSE.txt": "/race-car-bulletin/static/js/2.3d8a0131.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b1ec385c.js",
     "static/css/2.7d0b1304.chunk.css",
     "static/js/2.3d8a0131.chunk.js",
-    "static/css/main.54df9ba1.chunk.css",
-    "static/js/main.6d871aca.chunk.js"
+    "static/css/main.6a013b3a.chunk.css",
+    "static/js/main.5d0ac248.chunk.js"
   ]
 }

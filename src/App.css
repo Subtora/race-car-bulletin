@@ -2,10 +2,10 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-image: url(https://trevsm.github.io/race-car-bulletin/sky.jpg);
-  background-repeat: repeat-y;
-  background-position: center;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.thehungryjpeg.com%2Fthumbs2%2Fori_3486164_896ff08d7a416f3850f5869384f88c93d492f0c7_cartoon-fluffy-cloud-at-azure-skyscape-heavenly-clouds-on-blue-sky-a.jpg&f=1&nofb=1);
+  background-repeat: no-repeat;
   background-size: cover;
+  background-color: #53d2ff;
 }
 
 .top {
